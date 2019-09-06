@@ -92,6 +92,9 @@ export default class extends WebView {
                 keyboardDisplayRequiresUserAction={keyboardDisplayRequiresUserAction}
                 hideAccessory={hideAccessory}
                 webviewDebugEnabledWhenDev={webviewDebugEnabledWhenDev}
+                onLoadingFinish={()=>{
+                    if ( this.props.onLoad ) this.props.onLoad();
+                }}
             />
         );
 
