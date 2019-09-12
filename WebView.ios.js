@@ -98,6 +98,9 @@ export default class extends WebView {
         hideAccessory={hideAccessory}
         disableKeyboardAdjust={disableKeyboardAdjust}
         contentInsetAdjustmentBehavior={contentInsetAdjustmentBehavior}
+        onLoadingFinish={()=>{
+            if ( this.props.onLoad ) this.props.onLoad();
+        }}
       />
     );
 
