@@ -1,3 +1,4 @@
+def REACT_NATIVE_VERSION = new File(['node', '--print',"JSON.parse(require('fs').readFileSync(require.resolve('react-native/package.json'), 'utf-8')).version"].execute(null, rootDir).text.trim())
 buildscript {
     repositories {
         jcenter()
@@ -40,7 +41,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:' + REACT_NATIVE_VERSION
     implementation 'ren.yale.android:cachewebviewlib:2.0.2'
     implementation fileTree( dir: "libs", includes: ['*.jar'] )
 }
