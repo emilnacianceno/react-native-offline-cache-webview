@@ -42,6 +42,6 @@ repositories {
 
 dependencies {
     implementation 'com.facebook.react:react-native:' + REACT_NATIVE_VERSION
-    implementation 'ren.yale.android:cachewebviewlib:2.0.2'
+    implementation 'ren.yale.android:cachewebviewlib:2.2.1'
     implementation fileTree( dir: "libs", includes: ['*.jar'] )
 }
